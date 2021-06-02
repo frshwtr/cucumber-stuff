@@ -8,7 +8,7 @@ module KnowsMyAccount
             Sinatra::Application.account = account
             visit '/'
             fill_in 'amount', :with => amount
-            click_button 'Withdraw'
+            click_button "Withdraw"
         end
     end
 

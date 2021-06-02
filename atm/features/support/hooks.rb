@@ -1,5 +1,6 @@
 Before do
-    puts 'Go!'
+    BalanceStore.new.balance = 0
+    TransactionQueue.clear
 end
 
 After do

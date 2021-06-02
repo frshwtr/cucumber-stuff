@@ -11,6 +11,7 @@ Then /^(#{CAPTURE_CASH_AMOUNT}) should be deposited$/ do |amount|
 end
 
 Then /^the balance of my account should be (#{CAPTURE_CASH_AMOUNT})$/ do |amount|
-  expect(my_account.balance).to eq(amount),
-  "Expected balance to be #{amount}, but received #{my_account.balance}"
+  sleep 1
+  eventually {expect(my_account.balance).to eq(amount),
+  "Expected balance to be #{amount}, but received #{my_account.balance}"}
 end
